@@ -1,24 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Marks } from './Marks';
+import { Student } from './Student';
 
 function App() {
+  let marks=[55,20,45,79,30]
+  let books=[
+  {
+    id:1,
+    name:"Math"
+  },
+  {
+    id:2,
+    name:"Physics"
+  },
+  {
+    id:1,
+    name:"biology"
+  },
+  {
+    id:1,
+    name:"chemistery"
+  },
+  {
+    id:1,
+    name:"History"
+  }
+
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Student name = "Lucky" age={10} qualified={true} gender="female" />
+      <Marks marks={marks} books={books}/>
     </div>
   );
 }
